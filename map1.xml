@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TRANSACTION id="850" name="Purchase Order" structure="BEG|PO1|SCH" summarySegment="CTT" elementDelimiter="*" segmentDelimiter="~" alternativeElementDelimiters="*|^|?|…" alternativeSegmentDelimiters="~|]|\r\n|\n|^|?|…" numberOfASCColumns="221" documentNumberElement="BEG03" dynamicSegmentDelimiter="yes">
+  <ISA06 name="Sender ID" column="0" loop="1" displayGroup="0" visible="no" />
+  <SID06 name="Sender Name" column="1" loop="1" displayGroup="0" visible="no" />
+  <ST01 name="Transaction ID" column="2" loop="1" displayGroup="0" visible="no" />
+  <BEG01 name="Transaction Set Purpose Code" column="3" loop="1" displayGroup="0" crossrefFile="353.txt" crossrefValues="00=Original" />
+  <BEG02 name="PO Type" column="4" loop="1" displayGroup="0" crossrefFile="92.txt" crossrefValues="NE=New Order,SA=Stand-alone Order" />
+  <BEG03 name="PO Number" column="5" loop="1" displayGroup="0" />
+  <BEG05 name="PO Date" column="6" loop="1" dataType="DT" displayGroup="0" />
+  <BEG04 name="Release Number" column="7" loop="1" displayGroup="0" />
+  <BEG06 name="Contract Number" column="8" loop="1" displayGroup="0" />
+  <CUR02 name="Currency" column="9" loop="1" displayGroup="38" />
+  <REF02 name="Internal Vendor Number" column="10" loop="1" displayGroup="2" qualifier="REF01|IA;VR;VN" />
+  <REF02 name="Department Number" column="11" loop="1" displayGroup="2" qualifier="REF01|DP" />
+  <REF02 name="Merchandise Type Code" column="12" loop="1" displayGroup="2" qualifier="REF01|MR" />
+  <REF02 name="Promotion/Deal Number" column="13" loop="1" displayGroup="2" qualifier="REF01|PD" />
+  <REF02 name="Lot/Batch Number" column="14" loop="1" displayGroup="2" qualifier="REF01|LT" />
+  <REF02 name="Order Number" column="15" loop="1" displayGroup="2" qualifier="REF01|OQ" />
+  <REF02 name="Store Number" column="16" loop="1" displayGroup="2" qualifier="REF01|ST" />
+  <REF02 name="Customer Order Number" column="17" loop="1" displayGroup="2" qualifier="REF01|CO" />
+  <PER02 name="Contact Name" column="18" loop="1" displayGroup="38" />
+  <BCP01 name="Contact Phone" column="19" loop="1" displayGroup="38" visible="no" />
+  <BCF01 name="Contact Fax" column="20" loop="1" displayGroup="38" visible="no" />
+  <BCE01 name="Contact Email" column="21" loop="1" displayGroup="38" visible="no" />
+  <FOB01 name="Shipment Method of Payment" column="22" loop="1" displayGroup="38" />
+  <FOB02 name="FOB Point" column="23" loop="1" displayGroup="38" />
+  <FOB03 name="FOB Description" column="24" loop="1" displayGroup="38" />
+  <CSH01 name="Sales Requirement Code" column="25" loop="1" displayGroup="38" />
+  <MSG01 name="Message" column="26" loop="1" displayGroup="5" />
+  <MTX02 name="Note" column="27" loop="1" displayGroup="5" />
+  <TD504 name="Transportation Method" column="28" loop="1" displayGroup="3" crossrefFile="91.txt" crossrefValues="M=Motor (Common Carrier)" />
+  <TD503 name="SCAC Code" column="29" loop="1" displayGroup="3" />
+  <TD505 name="Routing/Carrier Name" column="30" loop="1" displayGroup="3" />
+  <ITD01 name="Terms Type Code" column="31" loop="1" displayGroup="7" crossrefFile="336.txt" crossrefValues="08=Basic Discount Offered,01=Basic,02=End of Month (EOM),05=Discount Not Applicable" />
+  <ITD02 name="Terms Basis Date Code" column="32" loop="1" displayGroup="7" crossrefFile="333.txt" crossrefValues="2=Delivery Date,15=Receipt of Goods" />
+  <ITD03 name="Terms Discount Percent" column="33" loop="1" displayGroup="7" />
+  <ITD04 name="Terms Discount Due Date" column="34" loop="1" displayGroup="7" />
+  <ITD05 name="Terms Discount Days Due" column="35" loop="1" displayGroup="7" />
+  <ITD06 name="Terms Net Due Date" column="36" loop="1" displayGroup="7" />
+  <ITD07 name="Terms Net Days" column="37" loop="1" displayGroup="7" />
+  <ITD08 name="Terms Discount Amount" column="38" loop="1" displayGroup="7" />
+  <ITD13 name="Terms Day of Month" column="39" loop="1" displayGroup="7" />
+  <ITD12 name="Terms Description" column="40" loop="1" displayGroup="7" />
+  <DTM02 name="Ship No Later Date" column="41" loop="1" qualifier="DTM01|038" dataType="DT" displayGroup="8" />
+  <DTM02 name="Ship Not Before Date" column="42" loop="1" qualifier="DTM01|037" dataType="DT" displayGroup="8" />
+  <DTM02 name="Do Not Deliver After Date" column="43" loop="1" qualifier="DTM01|063" dataType="DT" displayGroup="8" />
+  <DTM02 name="Do Not Deliver Before Date" column="44" loop="1" qualifier="DTM01|064" dataType="DT" displayGroup="8" />
+  <DTM02 name="Delivery Requested Date" column="45" loop="1" qualifier="DTM01|002" dataType="DT" displayGroup="8" />
+  <DTM02 name="Requested Ship Date" column="46" loop="1" qualifier="DTM01|010" dataType="DT" displayGroup="8" />
+  <DTM02 name="Cancel After Date" column="47" loop="1" qualifier="DTM01|001;175" dataType="DT" displayGroup="8" />
+  <N102 name="Name" column="48" loop="1" qualifier="N101|ST" displayGroup="15" displayGroupName="Ship To" />
+  <N103 name="Code Type" column="49" loop="1" qualifier="N101|ST" displayGroup="15" displayGroupName="Ship To" crossrefFile="66.txt" crossrefValues="UL=UCC/EAN Location Code,UL=UCC/EAN Location Code,UL=UCC/EAN Location Code" />
+  <N104 name="Code" column="50" loop="1" qualifier="N101|ST" displayGroup="15" displayGroupName="Ship To" />
+  <N201 name="Additional Name 1" column="51" loop="1" qualifier="N101|ST" displayGroup="15" displayGroupName="Ship To" />
+  <N301 name="Address 1" column="52" loop="1" qualifier="N101|ST" displayGroup="15" displayGroupName="Ship To" />
+  <N302 name="Address 2" column="53" loop="1" qualifier="N101|ST" displayGroup="15" displayGroupName="Ship To" />
+  <N401 name="City" column="54" loop="1" qualifier="N101|ST" displayGroup="15" displayGroupName="Ship To" />
+  <N402 name="State" column="55" loop="1" qualifier="N101|ST" displayGroup="15" displayGroupName="Ship To" />
+  <N403 name="ZipCode" column="56" loop="1" qualifier="N101|ST" displayGroup="15" displayGroupName="Ship To" />
+  <N404 name="Country" column="57" loop="1" qualifier="N101|ST" displayGroup="15" displayGroupName="Ship To" />
+  <N102 name="Name" column="58" loop="1" qualifier="N101|BT" displayGroup="16" displayGroupName="Bill To" />
+  <N103 name="Code Type" column="59" loop="1" qualifier="N101|BT" displayGroup="16" displayGroupName="Bill To" crossrefFile="66.txt" crossrefValues="" />
+  <N104 name="Code" column="60" loop="1" qualifier="N101|BT" displayGroup="16" displayGroupName="Bill To" />
+  <N201 name="Additional Name 1" column="61" loop="1" qualifier="N101|BT" displayGroup="16" displayGroupName="Bill To" />
+  <N301 name="Address 1" column="62" loop="1" qualifier="N101|BT" displayGroup="16" displayGroupName="Bill To" />
+  <N302 name="Address 2" column="63" loop="1" qualifier="N101|BT" displayGroup="16" displayGroupName="Bill To" />
+  <N401 name="City" column="64" loop="1" qualifier="N101|BT" displayGroup="16" displayGroupName="Bill To" />
+  <N402 name="State" column="65" loop="1" qualifier="N101|BT" displayGroup="16" displayGroupName="Bill To" />
+  <N403 name="ZipCode" column="66" loop="1" qualifier="N101|BT" displayGroup="16" displayGroupName="Bill To" />
+  <N404 name="Country" column="67" loop="1" qualifier="N101|BT" displayGroup="16" displayGroupName="Bill To" />
+  <N102 name="Name" column="68" loop="1" qualifier="N101|SF" displayGroup="17" displayGroupName="Ship From" />
+  <N103 name="Code Type" column="69" loop="1" qualifier="N101|SF" displayGroup="17" displayGroupName="Ship From" crossrefFile="66.txt" crossrefValues="" />
+  <N104 name="Code" column="70" loop="1" qualifier="N101|SF" displayGroup="17" displayGroupName="Ship From" />
+  <N201 name="Additional Name 1" column="71" loop="1" qualifier="N101|SF" displayGroup="17" displayGroupName="Ship From" />
+  <N301 name="Address 1" column="72" loop="1" qualifier="N101|SF" displayGroup="17" displayGroupName="Ship From" />
+  <N302 name="Address 2" column="73" loop="1" qualifier="N101|SF" displayGroup="17" displayGroupName="Ship From" />
+  <N401 name="City" column="74" loop="1" qualifier="N101|SF" displayGroup="17" displayGroupName="Ship From" />
+  <N402 name="State" column="75" loop="1" qualifier="N101|SF" displayGroup="17" displayGroupName="Ship From" />
+  <N403 name="ZipCode" column="76" loop="1" qualifier="N101|SF" displayGroup="17" displayGroupName="Ship From" />
+  <N404 name="Country" column="77" loop="1" qualifier="N101|SF" displayGroup="17" displayGroupName="Ship From" />
+  <SAC01 name="Allowance/Charge Indicator" column="78" loop="1" displayGroup="198" crossrefFile="248.txt" crossrefValues="N=No Allowance or Charge,A=Allowance" />
+  <SAC02 name="Allowance/Charge Code" column="79" loop="1" displayGroup="198" crossrefFile="1300.txt" crossrefValues="I410=Unsaleable Merchandise Allowance" />
+  <SAC05 name="Allowance/Charge Total Amount" column="80" loop="1" displayGroup="198" dataType="N2" />
+  <SAC06 name="Allowance/Charge Percent Qualifier" column="81" loop="1" displayGroup="199" crossrefFile="378.txt" crossrefValues="" />
+  <SAC07 name="Allowance/Charge Percent" column="82" loop="1" displayGroup="198" />
+  <SAC08 name="Allowance/Charge Rate" column="83" loop="1" displayGroup="198" />
+  <SAC09 name="Allowance/Charge UOM" column="84" loop="1" displayGroup="198" />
+  <SAC10 name="Allowance/Charge Quantity" column="85" loop="1" displayGroup="198" />
+  <SAC12 name="Allowance/Charge Method of Handling Code" column="86" loop="1" displayGroup="198" crossrefFile="331.txt" crossrefValues="02=Off Invoice" />
+  <SAC15 name="Allowance/Charge Description" column="87" loop="1" displayGroup="198" />
+  <SAC01 name="Allowance/Charge Indicator 2" column="88" loop="1" displayGroup="199" crossrefFile="248.txt" crossrefValues="" occurence="2" />
+  <SAC02 name="Allowance/Charge Code 2" column="89" loop="1" displayGroup="199" crossrefFile="1300.txt" crossrefValues="" occurence="2" />
+  <SAC05 name="Allowance/Charge Total Amount 2" column="90" loop="1" displayGroup="199" occurence="2" dataType="N2" />
+  <SAC06 name="Allowance/Charge Percent Qualifier 2" column="91" loop="1" displayGroup="199" crossrefFile="378.txt" crossrefValues="" occurence="2" />
+  <SAC07 name="Allowance/Charge Percent 2" column="92" loop="1" displayGroup="199" occurence="2" />
+  <SAC08 name="Allowance/Charge Rate 2" column="93" loop="1" displayGroup="199" occurence="2" />
+  <SAC09 name="Allowance/Charge UOM 2" column="94" loop="1" displayGroup="199" occurence="2" />
+  <SAC10 name="Allowance/Charge Quantity 2" column="95" loop="1" displayGroup="199" occurence="2" />
+  <SAC12 name="Allowance/Charge Method of Handling Code 2" column="96" loop="1" displayGroup="199" crossrefFile="331.txt" crossrefValues="" occurence="2" />
+  <SAC15 name="Allowance/Charge Description 2" column="97" loop="1" displayGroup="199" occurence="2" />
+  <SAC01 name="Allowance/Charge Indicator 3" column="98" loop="1" displayGroup="199" crossrefFile="248.txt" crossrefValues="" occurence="3" />
+  <SAC02 name="Allowance/Charge Code 3" column="99" loop="1" displayGroup="199" crossrefFile="1300.txt" crossrefValues="" occurence="3" />
+  <SAC05 name="Allowance/Charge Amount 3" column="100" loop="1" displayGroup="199" occurence="3" dataType="N2" />
+  <SAC06 name="Allowance/Charge Percent Qualifier 3" column="101" loop="1" displayGroup="199" crossrefFile="378.txt" crossrefValues="" occurence="3" />
+  <SAC07 name="Allowance/Charge Percent 3" column="102" loop="1" displayGroup="199" occurence="3" />
+  <SAC08 name="Allowance/Charge Rate 3" column="103" loop="1" displayGroup="199" occurence="3" />
+  <SAC09 name="Allowance/Charge UOM 3" column="104" loop="1" displayGroup="199" occurence="3" />
+  <SAC10 name="Allowance/Charge Quantity 3" column="105" loop="1" displayGroup="199" occurence="3" />
+  <SAC12 name="Allowance/Charge Method of Handling Code 3" column="106" loop="1" displayGroup="199" crossrefFile="331.txt" crossrefValues="" occurence="3" />
+  <SAC15 name="Allowance/Charge Description 3" column="107" loop="1" displayGroup="199" occurence="3" />
+  <SAC01 name="Allowance/Charge Indicator 4" column="108" loop="1" displayGroup="199" crossrefFile="248.txt" crossrefValues="" occurence="4" />
+  <SAC02 name="Allowance/Charge Code 4" column="109" loop="1" displayGroup="199" crossrefFile="1300.txt" crossrefValues="" occurence="4" />
+  <SAC05 name="Allowance/Charge Amount 4" column="110" loop="1" displayGroup="199" occurence="4" dataType="N2" />
+  <SAC06 name="Allowance/Charge Percent Qualifier 4" column="111" loop="1" displayGroup="199" crossrefFile="378.txt" crossrefValues="" occurence="4" />
+  <SAC07 name="Allowance/Charge Percent 4" column="112" loop="1" displayGroup="199" occurence="4" />
+  <SAC08 name="Allowance/Charge Rate 4" column="113" loop="1" displayGroup="199" occurence="4" />
+  <SAC09 name="Allowance/Charge UOM 4" column="114" loop="1" displayGroup="199" occurence="4" />
+  <SAC10 name="Allowance/Charge Quantity 4" column="115" loop="1" displayGroup="199" occurence="4" />
+  <SAC12 name="Allowance/Charge Method of Handling Code 4" column="116" loop="1" displayGroup="199" crossrefFile="331.txt" crossrefValues="" occurence="4" />
+  <SAC15 name="Allowance/Charge Description 4" column="117" loop="1" displayGroup="199" occurence="4" />
+  <REF02 name="Division" qualifier="REF01|19" loop="1" visible="no" column="118" />
+  <REF02 name="Buyer Vendor Suffix" qualifier="REF01|ZZ" occurence="2" loop="1" visible="no" column="119" />
+  <REF02 name="Buyer ID" qualifier="REF01|YD" loop="1" visible="no" column="120" />
+  <XYZ01 name="Reserved Header Field 4" loop="1" visible="no" column="121" />
+  <XYZ01 name="Reserved Header Field 5" loop="1" visible="no" column="122" />
+  <XYZ01 name="Reserved Header Field 6" loop="1" visible="no" column="123" />
+  <XYZ01 name="Reserved Header Field 7" loop="1" visible="no" column="124" />
+  <XYZ01 name="Reserved Header Field 8" loop="1" visible="no" column="125" />
+  <XYZ01 name="Reserved Header Field 9" loop="1" visible="no" column="126" />
+  <XYZ01 name="Reserved Header Field 10" loop="1" visible="no" column="127" />
+  <AMT02 name="Total Transaction Amount" column="128" loop="9" qualifier="AMT01|TT" displayGroup="24" />
+  <CTT02 name="Total Ordered Quantity" column="129" loop="9" displayGroup="23" />
+  <XYZ01 name="Unit of Measurement" loop="9" visible="no" column="130" />
+  <CTT03 name="Total Weight" column="131" loop="9" displayGroup="23" />
+  <CTT04 name="Unit of Measure" column="132" loop="9" displayGroup="23" crossrefFile="355.txt" crossrefValues="LB=Pound" />
+  <CTT05 name="Volume" column="133" loop="9" displayGroup="23" />
+  <CTT06 name="Unit of Measure" column="134" loop="9" displayGroup="23" crossrefFile="355.txt" crossrefValues="CF=Cubic Feet" />
+  <CTT01 name="Total Number Of Lines" column="135" loop="9" displayGroup="23" />
+  <PO101 name="Line Number" column="136" loop="2" displayGroup="1" />
+  <PO102 name="Ordered Quantity" column="137" loop="2" displayGroup="2" />
+  <PO103 name="Unit of Measurement" column="138" loop="2" displayGroup="3" crossrefFile="355.txt" crossrefValues="CA=Case,EA=Each" />
+  <PO104 name="Unit Price" column="139" loop="2" displayGroup="4" />
+  <PO105 name="Basis of Unit Price Code" column="140" loop="2" displayGroup="4" />
+  <UPC01 name="UPC/EAN Qualifier" loop="2" visible="no" column="141" />
+  <UPC02 name="UPC/EAN Code" loop="2" visible="no" column="142" />
+  <VIN01 name="Vendor Item Qualifier" loop="2" visible="no" column="143" />
+  <VIN02 name="Vendor Item Number" loop="2" visible="no" column="144" />
+  <BIN01 name="Buyer Item Qualifier" loop="2" visible="no" column="145" />
+  <BIN02 name="Buyer Item Number" loop="2" visible="no" column="146" />
+  <PID05 name="Color Description" column="147" loop="2" qualifier="PID02|75;73" displayGroup="20" />
+  <PID05 name="Size Description" column="148" loop="2" qualifier="PID02|91;74" displayGroup="20" />
+  <PID05 name="Item Description" column="149" loop="2" qualifier="PID02|08;" displayGroup="20" />
+  <CTP03 name="Retail Price" column="150" loop="2" qualifier="CTP02|RTL" displayGroup="21" />
+  <PO401 name="Pack" column="151" loop="2" displayGroup="21" />
+  <PO402 name="Size" column="152" loop="2" displayGroup="21" />
+  <PO403 name="Unit of Measurement" column="153" loop="2" displayGroup="21" crossrefFile="355.txt" crossrefValues="EA=Each" />
+  <XYZ01 name="Pallet Block and Tiers" loop="2" visible="no" column="154" />
+  <PO414 name="Inner Pack" column="155" loop="2" displayGroup="21" />
+  <SDQ04 name="Store Quantty" column="156" loop="2" displayGroup="21" />
+  <SDQ03 name="Store Number" column="157" loop="2" displayGroup="21" />
+  <XYZ01 name="Store Name" loop="2" visible="no" column="158" />
+  <XYZ01 name="Store Address 1" loop="2" visible="no" column="159" />
+  <XYZ01 name="Store Address 2" loop="2" visible="no" column="160" />
+  <XYZ01 name="Store City" loop="2" visible="no" column="161" />
+  <XYZ01 name="Store State" loop="2" visible="no" column="162" />
+  <XYZ01 name="Store Zipcode" loop="2" visible="no" column="163" />
+  <XYZ01 name="Store Country" loop="2" visible="no" column="164" />
+  <SAC01 name="Item Allowance/Charge Indicator" column="165" loop="2" displayGroup="198" crossrefFile="248.txt" crossrefValues="" />
+  <SAC02 name="Item Allowance/Charge Code" column="166" loop="2" displayGroup="198" crossrefFile="1300.txt" crossrefValues="" />
+  <SAC05 name="Item Allowance/Charge Total Amount" column="167" loop="2" displayGroup="198" dataType="N2" />
+  <SAC06 name="Item Allowance/Charge Percent Qualifier" column="168" loop="2" displayGroup="199" crossrefFile="378.txt" crossrefValues="" />
+  <SAC07 name="Item Allowance/Charge Percent" column="169" loop="2" displayGroup="198" />
+  <SAC08 name="Item Allowance/Charge Rate" column="170" loop="2" displayGroup="198" />
+  <SAC09 name="Item Allowance/Charge UOM" column="171" loop="2" displayGroup="198" />
+  <SAC10 name="Item Allowance/Charge Quantity" column="172" loop="2" displayGroup="198" />
+  <SAC12 name="Item Allowance/Charge Method of Handling Code" column="173" loop="2" displayGroup="198" crossrefFile="331.txt" crossrefValues="" />
+  <SAC15 name="Item Allowance/Charge Description" column="174" loop="2" displayGroup="198" />
+  <SAC01 name="Item Allowance/Charge Indicator 2" column="175" loop="2" displayGroup="198" crossrefFile="248.txt" crossrefValues="" occurence="2" />
+  <SAC02 name="Item Allowance/Charge Code 2" column="176" loop="2" displayGroup="198" crossrefFile="1300.txt" crossrefValues="" occurence="2" />
+  <SAC05 name="Item Allowance/Charge Total Amount 2" column="177" loop="2" displayGroup="198" occurence="2" dataType="N2" />
+  <SAC06 name="Item Allowance/Charge Percent Qualifier 2" column="178" loop="2" displayGroup="199" crossrefFile="378.txt" crossrefValues="" occurence="2" />
+  <SAC07 name="Item Allowance/Charge Percent 2" column="179" loop="2" displayGroup="198" occurence="2" />
+  <SAC08 name="Item Allowance/Charge Rate 2" column="180" loop="2" displayGroup="198" occurence="2" />
+  <SAC09 name="Item Allowance/Charge UOM 2" column="181" loop="2" displayGroup="198" occurence="2" />
+  <SAC10 name="Item Allowance/Charge Quantity 2" column="182" loop="2" displayGroup="198" occurence="2" />
+  <SAC12 name="Item Allowance/Charge Method of Handling Code 2" column="183" loop="2" displayGroup="198" crossrefFile="331.txt" crossrefValues="" occurence="2" />
+  <SAC15 name="Item Allowance/Charge Description 2" column="184" loop="2" displayGroup="198" occurence="2" />
+  <REV01 name="Inbound Doc Ref" loop="2" visible="no" column="185" />
+  <XYZ01 name="Reserved Detail Field 1" loop="2" visible="no" column="186" />
+  <XYZ01 name="Reserved Detail Field 2" loop="2" visible="no" column="187" />
+  <XYZ01 name="Reserved Detail Field 3" loop="2" visible="no" column="188" />
+  <XYZ01 name="Reserved Detail Field 4" loop="2" visible="no" column="189" />
+  <XYZ01 name="Reserved Detail Field 5" loop="2" visible="no" column="190" />
+  <XYZ01 name="Reserved Detail Field 6" loop="2" visible="no" column="191" />
+  <XYZ01 name="Reserved Detail Field 7" loop="2" visible="no" column="192" />
+  <XYZ01 name="Reserved Detail Field 8" loop="2" visible="no" column="193" />
+  <XYZ01 name="Reserved Detail Field 9" loop="2" visible="no" column="194" />
+  <XYZ01 name="Reserved Detail Field 10" loop="2" visible="no" column="195" />
+  <SCH01 name="Schedule Quantity" column="196" loop="3" displayGroup="2" />
+  <SCH02 name="Schedule UOM" column="197" loop="3" displayGroup="3" crossrefFile="355.txt" crossrefValues="CA=Case,EA=Each" />
+  <SCH06 name="Schedule Ship Date" column="198" loop="3" qualifier="SCH05|068" dataType="DT" displayGroup="8" />
+  <SCH06 name="Schedule Delivery Date" column="199" loop="3" qualifier="SCH05|067" dataType="DT" displayGroup="8" />
+  <SCH06 name="Schedule Buyers Dock Date" column="200" loop="3" qualifier="SCH05|112" dataType="DT" displayGroup="8" />
+  <XYZ01 name="Schedule Reserved Field 2" loop="3" visible="no" column="201" />
+  <XYZ01 name="Schedule Reserved Field 3" loop="3" visible="no" column="202" />
+  <SLN01 name="Subline Number" loop="3" visible="no" column="203" />
+  <SLN03 name="Subline Relationship Code" loop="3" visible="no" column="204" />
+  <SLN04 name="Subline Quantity Ordered" loop="3" visible="no" column="205" />
+  <SLN05 name="Subline Unit of Measurement" loop="3" visible="no" column="206" />
+  <SLN06 name="Subline Unit Price" loop="3" visible="no" column="207" />
+  <SLN07 name="Subline Basis of Unit Price Code" loop="3" visible="no" column="208" />
+  <SLN09 name="Subline UPC/EAN Qualifier" loop="3" visible="no" column="209" />
+  <SLN10 name="Subline UPC/EAN Code" loop="3" visible="no" column="210" />
+  <SLN11 name="Subline Vendor Item Qualifier" loop="3" visible="no" column="211" />
+  <SLN12 name="Subline Vendor Item Number" loop="3" visible="no" column="212" />
+  <SLN13 name="Subline Buyer Item Qualifier" loop="3" visible="no" column="213" />
+  <SLN14 name="Subline Buyer Item Number" loop="3" visible="no" column="214" />
+  <XYZ05 name="Subline Color Description" column="215" loop="3" displayGroup="20" />
+  <XYZ05 name="Subline Size Description" column="216" loop="3" displayGroup="20" />
+  <XYZ05 name="Subline Item Description" column="217" loop="3" displayGroup="20" />
+  <XYZ02 name="Subline Retail Price" column="218" loop="3" displayGroup="21" />
+  <XYZ01 name="Subline Pack" column="219" loop="3" displayGroup="21" />
+  <XYZ14 name="Subline Inner Pack" column="220" loop="3" displayGroup="21" />
+  <KEY01 name="KEY01" column="221" loop="1" displayGroup="18" visible="no" />
+  <KEY01 name="KEY01" column="222" loop="2" displayGroup="22" visible="no" />
+  <KEY01 name="KEY01" column="223" loop="3" displayGroup="22" visible="no" />
+  <PER01 name="Contact Type" column="224" loop="1" displayGroup="38" crossrefFile="366.txt" crossrefValues="BD=Buyer Name or Department,RE=Receiving Contact" />
+  <PER03 name="Communication Number Qualifier" column="225" loop="1" displayGroup="38" crossrefFile="365.txt" crossrefValues="TE=Telephone,EM=Electronic Mail" />
+  <PER04 name="Communication Number" column="226" loop="1" displayGroup="38" />
+  <PER05 name="Communication Number Qualifier 2" column="227" loop="1" displayGroup="38" crossrefFile="365.txt" crossrefValues="" />
+  <PER06 name="Communication Number 2" column="228" loop="1" displayGroup="38" />
+  <PER07 name="Communication Number Qualifier 3" column="229" loop="1" displayGroup="38" crossrefFile="365.txt" crossrefValues="" />
+  <PER08 name="Communication Number 3" column="230" loop="1" displayGroup="38" />
+  <PO106 name="Product Qualifier 1" column="231" loop="2" displayGroup="5" crossrefFile="235.txt" crossrefValues="IN=Buyer's Item Number,UK=EAN/UCC - 14,UA=U.P.C./EAN Case Code (2-5-5),CB=Buyer's Catalog Number" />
+  <PO107 name="Product Code 1" column="232" loop="2" displayGroup="5" />
+  <PO108 name="Product Qualifier 2" column="233" loop="2" displayGroup="5" crossrefFile="235.txt" crossrefValues="UP=UCC - 12,PI=Purchaser's Item Code" />
+  <PO109 name="Product Code 2" column="234" loop="2" displayGroup="5" />
+  <PO110 name="Product Qualifier 3" column="235" loop="2" displayGroup="5" crossrefFile="235.txt" crossrefValues="UP=UCC - 12,PI=Purchaser's Item Code,VN=Vendor's (Seller's) Item Number" />
+  <PO111 name="Product Code 3" column="236" loop="2" displayGroup="5" />
+  <PO112 name="Product Qualifier 4" column="237" loop="2" displayGroup="5" crossrefFile="235.txt" crossrefValues="UP=UCC - 12,PI=Purchaser's Item Code,UK=EAN/UCC - 14" />
+  <PO113 name="Product Code 4" column="238" loop="2" displayGroup="5" />
+  <N102 name="Name" column="239" loop="1" qualifier="N101|BY" displayGroup="16" displayGroupName="Buyer" visible="no" />
+  <N103 name="Code Type" column="240" loop="1" qualifier="N101|BY" displayGroup="16" displayGroupName="Buyer" crossrefFile="66.txt" crossrefValues="" visible="no" />
+  <N104 name="Code" column="241" loop="1" qualifier="N101|BY" displayGroup="16" displayGroupName="Buyer" visible="no" />
+  <N201 name="Additional Name 1" column="242" loop="1" qualifier="N101|BY" displayGroup="16" displayGroupName="Buyer" visible="no" />
+  <N301 name="Address 1" column="243" loop="1" qualifier="N101|BY" displayGroup="16" displayGroupName="Buyer" visible="no" />
+  <N302 name="Address 2" column="244" loop="1" qualifier="N101|BY" displayGroup="16" displayGroupName="Buyer" visible="no" />
+  <N401 name="City" column="245" loop="1" qualifier="N101|BY" displayGroup="16" displayGroupName="Buyer" visible="no" />
+  <N402 name="State" column="246" loop="1" qualifier="N101|BY" displayGroup="16" displayGroupName="Buyer" visible="no" />
+  <N403 name="ZipCode" column="247" loop="1" qualifier="N101|BY" displayGroup="16" displayGroupName="Buyer" visible="no" />
+  <N404 name="Country" column="248" loop="1" qualifier="N101|BY" displayGroup="16" displayGroupName="Buyer" visible="no" />
+  <N102 name="Name" column="249" loop="1" qualifier="N101|VN" displayGroup="17" displayGroupName="Vendor" visible="no" />
+  <N103 name="Code Type" column="250" loop="1" qualifier="N101|VN" displayGroup="17" displayGroupName="Vendor" crossrefFile="66.txt" crossrefValues="" visible="no" />
+  <N104 name="Code" column="251" loop="1" qualifier="N101|VN" displayGroup="17" displayGroupName="Vendor" visible="no" />
+  <N201 name="Additional Name 1" column="252" loop="1" qualifier="N101|VN" displayGroup="17" displayGroupName="Vendor" visible="no" />
+  <N301 name="Address 1" column="253" loop="1" qualifier="N101|VN" displayGroup="17" displayGroupName="Vendor" visible="no" />
+  <N302 name="Address 2" column="254" loop="1" qualifier="N101|VN" displayGroup="17" displayGroupName="Vendor" visible="no" />
+  <N401 name="City" column="255" loop="1" qualifier="N101|VN" displayGroup="17" displayGroupName="Vendor" visible="no" />
+  <N402 name="State" column="256" loop="1" qualifier="N101|VN" displayGroup="17" displayGroupName="Vendor" visible="no" />
+  <N403 name="ZipCode" column="257" loop="1" qualifier="N101|VN" displayGroup="17" displayGroupName="Vendor" visible="no" />
+  <N404 name="Country" column="258" loop="1" qualifier="N101|VN" displayGroup="17" displayGroupName="Vendor" visible="no" />
+  <N102 name="Name" column="259" loop="1" qualifier="N101|SU" displayGroup="17" displayGroupName="Supplier" visible="no" />
+  <N103 name="Code Type" column="260" loop="1" qualifier="N101|SU" displayGroup="17" displayGroupName="Supplier" crossrefFile="66.txt" crossrefValues="" visible="no" />
+  <N104 name="Code" column="261" loop="1" qualifier="N101|SU" displayGroup="17" displayGroupName="Supplier" visible="no" />
+  <N201 name="Additional Name 1" column="262" loop="1" qualifier="N101|SU" displayGroup="17" displayGroupName="Supplier" visible="no" />
+  <N301 name="Address 1" column="263" loop="1" qualifier="N101|SU" displayGroup="17" displayGroupName="Supplier" visible="no" />
+  <N302 name="Address 2" column="264" loop="1" qualifier="N101|SU" displayGroup="17" displayGroupName="Supplier" visible="no" />
+  <N401 name="City" column="265" loop="1" qualifier="N101|SU" displayGroup="17" displayGroupName="Supplier" visible="no" />
+  <N402 name="State" column="266" loop="1" qualifier="N101|SU" displayGroup="17" displayGroupName="Supplier" visible="no" />
+  <N403 name="ZipCode" column="267" loop="1" qualifier="N101|SU" displayGroup="17" displayGroupName="Supplier" visible="no" />
+  <N404 name="Country" column="268" loop="1" qualifier="N101|SU" displayGroup="17" displayGroupName="Supplier" visible="no" />
+  <N102 name="Name" column="269" loop="1" qualifier="N101|Z7" displayGroup="17" displayGroupName="Mark For" visible="no" />
+  <N103 name="Code Type" column="270" loop="1" qualifier="N101|Z7" displayGroup="17" displayGroupName="Mark For" crossrefFile="66.txt" crossrefValues="" visible="no" />
+  <N104 name="Code" column="271" loop="1" qualifier="N101|Z7" displayGroup="17" displayGroupName="Mark For" visible="no" />
+  <N201 name="Additional Name 1" column="272" loop="1" qualifier="N101|Z7" displayGroup="17" displayGroupName="Mark For" visible="no" />
+  <N301 name="Address 1" column="273" loop="1" qualifier="N101|Z7" displayGroup="17" displayGroupName="Mark For" visible="no" />
+  <N302 name="Address 2" column="274" loop="1" qualifier="N101|Z7" displayGroup="17" displayGroupName="Mark For" visible="no" />
+  <N401 name="City" column="275" loop="1" qualifier="N101|Z7" displayGroup="17" displayGroupName="Mark For" visible="no" />
+  <N402 name="State" column="276" loop="1" qualifier="N101|Z7" displayGroup="17" displayGroupName="Mark For" visible="no" />
+  <N403 name="ZipCode" column="277" loop="1" qualifier="N101|Z7" displayGroup="17" displayGroupName="Mark For" visible="no" />
+  <N404 name="Country" column="278" loop="1" qualifier="N101|Z7" displayGroup="17" displayGroupName="Mark For" visible="no" />
+  <ISA05 name="Interchange ID Qualifier" column="279" loop="1" displayGroup="0" visible="no" />
+  <N902 name="Vendor Number" column="280" loop="1" displayGroup="2" qualifier="N901|VR" />
+  <N102 name="Name" column="281" loop="1" qualifier="N101|BS" displayGroup="17" displayGroupName="Bill and Ship To" visible="no" />
+  <N103 name="Code Type" column="282" loop="1" qualifier="N101|BS" displayGroup="17" displayGroupName="Bill and Ship To" crossrefFile="66.txt" crossrefValues="" visible="no" />
+  <N104 name="Code" column="283" loop="1" qualifier="N101|BS" displayGroup="17" displayGroupName="Bill and Ship To" visible="no" />
+  <N201 name="Additional Name 1" column="284" loop="1" qualifier="N101|BS" displayGroup="17" displayGroupName="Bill and Ship To" visible="no" />
+  <N301 name="Address 1" column="285" loop="1" qualifier="N101|BS" displayGroup="17" displayGroupName="Bill and Ship To" visible="no" />
+  <N302 name="Address 2" column="286" loop="1" qualifier="N101|BS" displayGroup="17" displayGroupName="Bill and Ship To" visible="no" />
+  <N401 name="City" column="287" loop="1" qualifier="N101|BS" displayGroup="17" displayGroupName="Bill and Ship To" visible="no" />
+  <N402 name="State" column="288" loop="1" qualifier="N101|BS" displayGroup="17" displayGroupName="Bill and Ship To" visible="no" />
+  <N403 name="ZipCode" column="289" loop="1" qualifier="N101|BS" displayGroup="17" displayGroupName="Bill and Ship To" visible="no" />
+  <N404 name="Country" column="290" loop="1" qualifier="N101|BS" displayGroup="17" displayGroupName="Bill and Ship To" visible="no" />
+  <N102 name="Name" column="291" loop="1" qualifier="N101|DN" displayGroup="17" displayGroupName="Referring Supplier" visible="no" />
+  <N103 name="Code Type" column="292" loop="1" qualifier="N101|DN" displayGroup="17" displayGroupName="Referring Supplier" crossrefFile="66.txt" crossrefValues="" visible="no" />
+  <N104 name="Code" column="293" loop="1" qualifier="N101|DN" displayGroup="17" displayGroupName="Referring Supplier" visible="no" />
+  <N201 name="Additional Name 1" column="294" loop="1" qualifier="N101|DN" displayGroup="17" displayGroupName="Referring Supplier" visible="no" />
+  <N301 name="Address 1" column="295" loop="1" qualifier="N101|DN" displayGroup="17" displayGroupName="Referring Supplier" visible="no" />
+  <N302 name="Address 2" column="296" loop="1" qualifier="N101|DN" displayGroup="17" displayGroupName="Referring Supplier" visible="no" />
+  <N401 name="City" column="297" loop="1" qualifier="N101|DN" displayGroup="17" displayGroupName="Referring Supplier" visible="no" />
+  <N402 name="State" column="298" loop="1" qualifier="N101|DN" displayGroup="17" displayGroupName="Referring Supplier" visible="no" />
+  <N403 name="ZipCode" column="299" loop="1" qualifier="N101|DN" displayGroup="17" displayGroupName="Referring Supplier" visible="no" />
+  <N404 name="Country" column="300" loop="1" qualifier="N101|DN" displayGroup="17" displayGroupName="Referring Supplier" visible="no" />
+  <N102 name="Name" column="301" loop="1" qualifier="N101|PD" displayGroup="17" displayGroupName="Department" visible="no" />
+  <REF02 name="Contact Phone" qualifier="REF01|42" loop="1" column="302" />
+  <N102 name="Contact Name" loop="1" column="303" qualifier="N101|PD" />
+  <EdiProcess>
+    <EdiProcessCommand commandNumber="1">
+      <Command>CORRECT_STRUCTURE</Command>
+      <Params><![CDATA["BEG|PO1|SCH"_"CTT"_"KEY"_"SCH|KEY"]]></Params>
+      <Description><![CDATA[Correct the structure of EDI file]]></Description>
+    </EdiProcessCommand>
+    <EdiProcessCommand commandNumber="2">
+      <Command>SPLIT_SDQ_PO_BY_STORE</Command>
+      <Params><![CDATA["PO1"_"CTT"]]></Params>
+      <Description><![CDATA[Correct the structure of EDI file]]></Description>
+    </EdiProcessCommand>
+    <EdiProcessCommand commandNumber="3">
+      <Command>COMBINE_SEGMENT_BY_QUALIFIER</Command>
+      <Params><![CDATA["MTX"_2_1_" "]]></Params>
+      <Description><![CDATA[Combine all the MTX02 segments into one]]></Description>
+    </EdiProcessCommand>
+    <EdiProcessCommand commandNumber="4">
+      <Command>COMBINE_SEGMENT_BY_QUALIFIER</Command>
+      <Params><![CDATA["PID"_5_2_" "]]></Params>
+      <Description><![CDATA[Combine all the PID05 segments into one]]></Description>
+    </EdiProcessCommand>
+    <EdiProcessCommand commandNumber="5">
+      <Command>COMBINE_SEGMENT</Command>
+      <Params><![CDATA["MSG"_1_" "]]></Params>
+      <Description><![CDATA[Combine all the MSG01 segments into one]]></Description>
+    </EdiProcessCommand>
+  </EdiProcess>
+  <AscProcess>
+    <AscProcessCommand commandNumber="1">
+      <Command>CONCATENATE</Command>
+      <Params><![CDATA[<SID06>|<ISA06>_<ISA05>|<ISA06>_""]]></Params>
+      <Description><![CDATA[]]></Description>
+    </AscProcessCommand>
+    <AscProcessCommand commandNumber="2">
+      <Command>STRING_CROSSREF</Command>
+      <Params><![CDATA[<SID06>_"ZZCOSTCOMERCH=Costco US|ZZCOSTCOMERCHCA=Costco Canada|01103391843=Costco|070083967000016=McLane|ZZCVS=CVS"]]></Params>
+      <Description><![CDATA[]]></Description>
+    </AscProcessCommand>
+    <AscProcessCommand commandNumber="3">
+      <Command>MULTIPLE_COLUMNS_CROSSREF</Command>
+      <Params><![CDATA[<UPC01>_<PO106>|<PO108>|<PO110>|<PO112>_"UI"|"UA"|"UK"|"UP"_<PO106>|<PO108>|<PO110>|<PO112>_"=="]]></Params>
+      <Description><![CDATA[]]></Description>
+    </AscProcessCommand>
+    <AscProcessCommand commandNumber="4">
+      <Command>MULTIPLE_COLUMNS_CROSSREF</Command>
+      <Params><![CDATA[<UPC02>_<PO106>|<PO108>|<PO110>|<PO112>_"UI"|"UA"|"UK"|"UP"_<PO107>|<PO109>|<PO111>|<PO113>_"=="]]></Params>
+      <Description><![CDATA[]]></Description>
+    </AscProcessCommand>
+    <AscProcessCommand commandNumber="5">
+      <Command>MULTIPLE_COLUMNS_CROSSREF</Command>
+      <Params><![CDATA[<VIN01>_<PO106>|<PO108>|<PO110>|<PO112>_"VC"|"VP"|"VN"|"VA"|"MN"_<PO106>|<PO108>|<PO110>|<PO112>_"=="]]></Params>
+      <Description><![CDATA[]]></Description>
+    </AscProcessCommand>
+    <AscProcessCommand commandNumber="6">
+      <Command>MULTIPLE_COLUMNS_CROSSREF</Command>
+      <Params><![CDATA[<VIN02>_<PO106>|<PO108>|<PO110>|<PO112>_"VC"|"VP"|"VN"|"VA"|"MN"_<PO107>|<PO109>|<PO111>|<PO113>_"=="]]></Params>
+      <Description><![CDATA[]]></Description>
+    </AscProcessCommand>
+    <AscProcessCommand commandNumber="7">
+      <Command>MULTIPLE_COLUMNS_CROSSREF</Command>
+      <Params><![CDATA[<BIN01>_<PO106>|<PO108>|<PO110>|<PO112>_"PI"|"IT"|"CB"|"SK"|"IN"_<PO106>|<PO108>|<PO110>|<PO112>_"=="]]></Params>
+      <Description><![CDATA[]]></Description>
+    </AscProcessCommand>
+    <AscProcessCommand commandNumber="8">
+      <Command>MULTIPLE_COLUMNS_CROSSREF</Command>
+      <Params><![CDATA[<BIN02>_<PO106>|<PO108>|<PO110>|<PO112>_"PI"|"IT"|"CB"|"SK"|"IN"_<PO107>|<PO109>|<PO111>|<PO113>_"=="]]></Params>
+      <Description><![CDATA[]]></Description>
+    </AscProcessCommand>
+    <AscProcessCommand commandNumber="9">
+      <Command>MULTIPLE_COLUMNS_CROSSREF</Command>
+      <Params><![CDATA[<BCP01>_<PER03>|<PER05>|<PER07>_"TE"_<PER04>|<PER06>|<PER08>_"=="]]></Params>
+      <Description><![CDATA[]]></Description>
+    </AscProcessCommand>
+    <AscProcessCommand commandNumber="10">
+      <Command>COPY_N1LOOP</Command>
+      <Params><![CDATA["BT"_1_"BY"_1_"CopyIfEmptyTarget"]]></Params>
+      <Description><![CDATA[Copy N1*BY to N1*BT]]></Description>
+    </AscProcessCommand>
+    <AscProcessCommand commandNumber="11">
+      <Command>COPY_N1LOOP</Command>
+      <Params><![CDATA["SF"_1_"VN"_1_"CopyIfEmptyTarget"]]></Params>
+      <Description><![CDATA[Copy N1*VN to N1*SF]]></Description>
+    </AscProcessCommand>
+    <AscProcessCommand commandNumber="12">
+      <Command>COPY_N1LOOP</Command>
+      <Params><![CDATA["SF"_1_"SU"_1_"CopyIfEmptyTarget"]]></Params>
+      <Description><![CDATA[Copy N1*SU to N1*SF]]></Description>
+    </AscProcessCommand>
+    <AscProcessCommand commandNumber="13">
+      <Command>COPY_N1LOOP</Command>
+      <Params><![CDATA["ST"|"BT"_1_"BS"_1_"CopyIfEmptyTarget"]]></Params>
+      <Description><![CDATA[Copy N1*BS to N1*ST and N1*BT]]></Description>
+    </AscProcessCommand>
+    <AscProcessCommand commandNumber="14">
+      <Command>COPIES</Command>
+      <Params><![CDATA[10|11|<BCP01>|18_280|301|302|303_"CopyIfEmptyTarget"]]></Params>
+      <Description><![CDATA[Copy]]></Description>
+    </AscProcessCommand>
+  </AscProcess>
+</TRANSACTION>
